@@ -1,10 +1,14 @@
 subprojects {
   apply plugin: 'java'
-// https://mvnrepository.com/artifact/com.google.guava/guava
-  compile group: 'com.google.guava', name: 'guava', version: '24.0-jre'
+
+
 
   repositories {
     jcenter()
 
+  }
+  dependencies {
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile group: 'com.google.guava', name: 'guava', version: '24.0-jre'
   }
 }
