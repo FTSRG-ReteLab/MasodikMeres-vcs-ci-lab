@@ -30,7 +30,12 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
-		this.speedLimit = speedLimit;
+		if (speedLimit>120)
+			this.speedLimit = 120;
+		else if (speedLimit<5)
+			this.speedLimit = 5;
+		else
+			this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 		
 	}
