@@ -3,7 +3,6 @@ package hu.bme.mit.train.user;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 
-import java.util.Timer;
 
 public class TrainUserImpl implements TrainUser {
 
@@ -32,7 +31,7 @@ public class TrainUserImpl implements TrainUser {
 
 		if(joystickPosition < 0){
 			speed+=5;
-		}else{
+		}else if(joystickPosition > 0){
 			speed-=5;
 		}
 		controller.setJoystickPosition(joystickPosition);
